@@ -2,7 +2,17 @@ import java.util.ArrayList;
 import java.util.LinkedList;
 public class App {
     public static void main(String[] args) throws Exception {
-        lista_encadeada();
+        // lista_encadeada();
+        // lista_simples();
+        ListaCircular playlist = new ListaCircular();
+        playlist.adicionar("Dani California - Red Hot Chili Peppers");
+        playlist.adicionar("Can't stop -  Red Hot Chili Peppers");
+        playlist.adicionar("By the way -  Red Hot Chili Peppers");
+        playlist.adicionar("Californication -  Red Hot Chili Peppers");
+        playlist.adicionar("Thriller - Michael Jackson");
+        playlist.adicionar("Hello - Adelle");
+        playlist.adicionar("Xuxa");
+        playlist.percorrer(4);
     }
     public static void lista_encadeada(){
         // lista encadeada
@@ -20,6 +30,20 @@ public class App {
         carros.addFirst("Fiat");
         // adicionando no ultimo espaço
         carros.addLast("Honda");
+
+        carros.remove(1);
+        System.out.println(carros.toString());
+
+        //removendo no inicio da lista
+        carros.removeFirst();
+        // removendo no final da lista
+        carros.removeLast();
+
+        System.out.println("Acesso direto " + carros.get(1));
+        System.out.println("Acesso 1º item da lista " + carros.getFirst());
+        System.err.println("Acessando o ultimo item da lista " + carros.getLast());
+
+
     }
 
     public static void lista_simples(){
