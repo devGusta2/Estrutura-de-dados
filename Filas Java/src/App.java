@@ -18,8 +18,36 @@
     --empty - verifica se é vazio
 */
 
+// offer - adiciona elementos na lista;
+import java.util.LinkedList;
+import java.util.Queue;
 public class App {
     public static void main(String[] args) throws Exception {
-        System.out.println("Hello, World!");
+        // Criando Fila
+        Queue<String> veiculos  = new LinkedList<>();
+        veiculos.offer("Gol");
+        veiculos.offer("Argo");
+        veiculos.offer("Kwid");
+        veiculos.offer("HB20");
+        
+
+        // Qual o tamanho esta na fila
+        System.out.println("Quantidade de veículos na fila: " + veiculos.size());
+        // A fila está vazia ?
+        System.out.println("Tem veículos na fila ?: " + veiculos.isEmpty());
+        // Quem está no inicio - peek();
+        System.out.println("O veículo que está no início é: " + veiculos.peek());
+        
+        
+        // Percorrendo uma fila
+        for(String carro:veiculos){
+            System.out.println(carro);
+        }
+        
+        //Removendo elementos do inicio da fila
+        
+        System.err.println("Removendo veículo: " + veiculos.poll());
+        System.err.println("Removendo veículo: " + veiculos.poll());
+        
     }
 }
